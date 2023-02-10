@@ -99,6 +99,7 @@ class main(Adw.Application):
 
     def on_about(self, widget):
         NCLib.CreateAdwAboutWindow(self,"NorgCrypt", "1.0", "Official Frontend for NCCrypt", "github.com/norgcollective/NCCrypt-Frontend", ["Henry Schynol"], "network-wireless-encrypted-symbolic")
+        self.dlg_AboutApplication.set_debug_info("libnccrypt 1.0\nGTK " + str(Gtk.get_major_version()) + "." + str(Gtk.get_minor_version()) + "." + str(Gtk.get_micro_version()) + "\nlibadwaita " + str(Adw.get_major_version()) + "." + str(Adw.get_minor_version()) + "." + str(Adw.get_micro_version()))
         self.dlg_AboutApplication.show()
 
     def on_doencrypt(self, widget):
